@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import requests
 from django.shortcuts import render
 
@@ -159,3 +160,17 @@ def index(request):
             }
 
     return render(request, "app1/index.html", {"users": users, "error": error})
+=======
+from django.shortcuts import render
+colleges={
+            'svecw':'shri',
+            'vit':'vishnu'
+        }
+
+# Create your views here.
+def project(request):
+    return render(request,"project.html",{
+        "clg":colleges,
+        })
+
+>>>>>>> 021ba3abbfa3e76af9283c024290d1e6fd778e34
