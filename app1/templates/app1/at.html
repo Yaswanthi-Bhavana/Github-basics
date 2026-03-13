@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title align: center>Users Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        th,
+        td {
+            border: 1px solid rgb(63, 210, 247);
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: rgb(245, 72, 161);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 style="text-align:center;">Users List</h2>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <!-- <th>City</th> -->
+        </tr>
+
+        {% for user in users %}
+        <tr>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <!-- <td>{{ user.address.city }}</td> -->
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</body>
+
+</html>
