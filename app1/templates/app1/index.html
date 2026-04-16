@@ -1,0 +1,222 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather App</title>
+</head>
+
+<body>
+
+    <h2>Weather Application</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <input type="text" name="city" placeholder="Enter City Name">
+        <button type="submit">Check Weather</button>
+
+    </form>
+
+    {% if error %}
+    <p style="color:red">{{ error }}</p>
+    {% endif %}
+
+    {% if weather.city %}
+    <h3>Weather in {{ weather.city }}</h3>
+
+    <p>Temperature: {{ weather.temperature }} °C</p>
+    <p>Humidity: {{ weather.humidity }} %</p>
+    <p>Wind Speed: {{ weather.wind }} m/s</p>
+    <p>Description: {{ weather.description }}</p>
+
+    {% endif %}
+
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather Temperature App</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #e6f2ff;
+            margin-top: 100px;
+        }
+
+        input {
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px;
+        }
+
+        .result {
+            font-size: 22px;
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Weather Temperature App</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <input type="text" name="city" placeholder="Enter city name" required>
+
+        <button type="submit">Get Temperature</button>
+
+    </form>
+
+    {% if request.method == "POST" and temperature %}
+    <div class="result">
+        Temperature: {{ temperature }} °C
+    </div>
+    {% endif %}
+
+    {% if error %}
+    <p style="color:red">{{ error }}</p>
+    {% endif %}
+
+</body>
+
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather App</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .container {
+            background: white;
+            width: 400px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            width: 70%;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 15px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 22px;
+        }
+
+        .error {
+            color: red;
+            margin-top: 15px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Weather App</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <input type="text" name="city" placeholder="Enter city name" value="{{ city }}" required>
+
+            <button type="submit">Search</button>
+
+        </form>
+
+        {% if temperature %}
+
+        <div class="result">
+            City: <b>{{ city }}</b><br><br>
+            Temperature: <b>{{ temperature }} °C</b>
+        </div>
+
+        {% endif %}
+
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather App</title>
+</head>
+
+<body>
+
+    <h2>Weather App</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="city" placeholder="Enter City Name">
+        <button type="submit">Check Weather</button>
+    </form>
+
+    {% if error %}
+    <p>{{ error }}</p>
+    {% endif %}
+
+    {% if users %}
+    <p>City: {{ users.city }}</p>
+    <p>Temperature: {{ users.temperature }} °C</p>
+    <p>Humidity: {{ users.humidity }} %</p>
+    <p>Wind Speed: {{ users.wind }} m/s</p>
+    <p>Description: {{ users.description }}</p>
+    {% endif %}
+
+</body>
+
+</html>
