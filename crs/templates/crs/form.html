@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Course Registration</title>
+</head>
+
+<body>
+
+    <h1>Registered Courses</h1>
+
+    <table border="1">
+
+        <tr>
+            <th>Student Name</th>
+            <th>Course Name</th>
+            <th>Course Code</th>
+            <th>Semester</th>
+        </tr>
+
+        {% for course in courses %}
+
+        <tr>
+            <td>{{course.student_name}}</td>
+            <td>{{course.course_name}}</td>
+            <td>{{course.course_code}}</td>
+            <td>{{course.semester}}</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</body>
+
+</html>

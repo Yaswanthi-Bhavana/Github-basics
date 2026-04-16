@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Course Enrollment Form</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label>Name:</label><br>
+        {{ form.name }}<br><br>
+
+        <label>Email:</label><br>
+        {{ form.email }}<br><br>
+
+        <label>Course:</label><br>
+        {{ form.course }}<br><br>
+
+        <button type="submit">Enroll</button>
+    </form>
+
+</body>
+
+</html>
